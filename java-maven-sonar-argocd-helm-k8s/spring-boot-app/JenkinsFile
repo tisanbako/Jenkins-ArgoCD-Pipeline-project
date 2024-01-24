@@ -16,7 +16,7 @@ pipeline {
                 sh 'git fetch origin main'
 
                 // Check out the 'main' branch
-                sh 'git checkout origin/main'
+                sh 'git checkout -b main origin/main'
 
                 // Print current branch and commit after checkout
                 sh 'git branch'
