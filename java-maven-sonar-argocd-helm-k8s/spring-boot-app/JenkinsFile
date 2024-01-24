@@ -16,7 +16,8 @@ pipeline {
                 sh 'git fetch origin main'
 
                 // Check out the 'main' branch
-                sh 'git checkout -b main origin/main'
+                sh 'echo passed'
+                //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
 
                 // Print current branch and commit after checkout
                 sh 'git branch'
