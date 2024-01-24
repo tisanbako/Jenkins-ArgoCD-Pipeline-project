@@ -26,7 +26,7 @@ pipeline {
     }
     stage('push') {
       steps {
-        sh 'git push'
+        sh ' git push origin HEAD:main'
         //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
       }
     }
