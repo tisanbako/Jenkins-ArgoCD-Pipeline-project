@@ -59,7 +59,7 @@ adduser sonarqube
 ### add sonarwube user to sudo doers list
 
 ```
-sudo su usermod -aG
+usermod -aG sudo sonarqube
 ```
 
 ### Download Sonarqube binary and congifure sonarqube
