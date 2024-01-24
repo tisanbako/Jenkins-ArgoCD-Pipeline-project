@@ -13,7 +13,7 @@ pipeline {
                 sh 'git rev-parse HEAD'
 
                 // Fetch the latest changes from the remote repository
-                sh 'git fetch origin main'
+                //sh 'git fetch origin main'
 
                 // Check out the 'main' branch
                 sh 'echo passed'
