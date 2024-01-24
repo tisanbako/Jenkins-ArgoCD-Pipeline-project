@@ -17,7 +17,6 @@ Install Jenkins, configure Docker as agent, set up cicd, deploy applications to 
 - Go to AWS Console
 - Instances(running)
 - Launch instances
-- Ssh into the instance
 
 <img width="994" alt="Screenshot 2023-02-01 at 12 37 45 PM" src="https://user-images.githubusercontent.com/43399466/215974891-196abfe9-ace0-407b-abd2-adcffe218e3f.png">
 
@@ -118,9 +117,9 @@ sudo apt install docker.io
 ### Grant Jenkins user and Ubuntu user permission to docker deamon.
 
 ```
- 
-sudo su usermod -aG docker jenkins
-sudo su usermod -aG docker ubuntu
+sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
 systemctl restart docker
 ```
 
@@ -132,13 +131,6 @@ http://<ec2-instance-public-ip>:8080/restart
 
 The docker agent configuration is now successful.
 
-### 12
-
-### 13 install ArgoCD operator (When minikubstarts)
-- 
-
-
-### 14 github credentials 
 
 
 
