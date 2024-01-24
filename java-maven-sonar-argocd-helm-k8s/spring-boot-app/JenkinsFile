@@ -12,6 +12,25 @@ pipeline {
         //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
       }
     }
+    stage('add') {
+      steps {
+        sh 'git add .'
+        //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
+      }
+    }
+    stage('commit') {
+      steps {
+        sh 'git commit -m "updating files"'
+        //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
+      }
+    }
+    stage('push') {
+      steps {
+        sh 'git push'
+        //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
+      }
+    }
+
     stage('Build and Test') {
       steps {
         sh 'ls -ltr'
