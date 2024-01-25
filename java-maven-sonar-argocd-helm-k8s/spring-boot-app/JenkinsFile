@@ -14,12 +14,12 @@ pipeline {
         }
     }
 }
-  //   stage('Checkout') {
-  //     steps {
-  //       sh 'echo passed'
-  //       git branch: 'main', url: 'https://github.com/tisanbako/Jenkins-ArgoCD-Pipeline-project.git'
-  //     }
-  //   }
+    // stage('Checkout') {
+    //   steps {
+    //     sh 'echo passed'
+    //     git branch: 'main', url: 'https://github.com/tisanbako/Jenkins-ArgoCD-Pipeline-project.git'
+    //   }
+    // }
     
     stage('Build and Test') {
       steps {
