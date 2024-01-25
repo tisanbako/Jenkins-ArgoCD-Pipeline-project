@@ -5,13 +5,21 @@ pipeline {
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
-  stages {
+   stages {  
     stage('Checkout') {
       steps {
-        sh 'echo passed'
-        git branch: 'main', url: 'https://github.com/tisanbako/Jenkins-ArgoCD-Pipeline-project.git'
-      }
+        script {
+            // Checkout the desired branch (replace 'main' with your branch name)
+          checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/tisanbako/Jenkins-ArgoCD-Pipeline-project.git']]])
+        }
     }
+}
+  //   stage('Checkout') {
+  //     steps {
+  //       sh 'echo passed'
+  //       git branch: 'main', url: 'https://github.com/tisanbako/Jenkins-ArgoCD-Pipeline-project.git'
+  //     }
+  //   }
     
     stage('Build and Test') {
       steps {
