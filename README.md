@@ -1,6 +1,6 @@
 # Jenkins/ArcoCD-Pipeline
 
-![alt text](./project-images/Jenkins-argoCD.gif)
+![alt text](https://github.com/tisanbako/Jenkins-ArgoCD-Pipeline-project/blob/main/project-images/Jenkins-ArgoCD.gif)
 
 ![alt text](./project-images/aws-jenkins-server.png)
 
